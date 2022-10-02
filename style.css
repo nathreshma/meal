@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Nunito&display=swap');
+
+:root {
+  --warm-red: #efe6f8;;
+  --off-white: #d1b149;
+  --charcoal: #341292;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+  Global Styles
+========================================================================== */
+
+body {
+  font-family: 'cursive', sans-serif;
+  color: var(--charcoal);
+  background-color: var(--off-white);
+  margin: 0;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 60px;
+  width: 100vw;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+  Nav Styles
+========================================================================== */
+
+nav {
+  padding-top: 0.3em;
+  padding-right: 1em;
+  background-color: var(--warm-red);
+  display: flex;
+  justify-content: flex-end;
+  border:  var(--warm-red) 1px solid;
+}
+
+.nav-icon {
+  padding: 5px;
+  color: var(--charcoal);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+  Header Styles
+========================================================================== */
+
+header {
+  background-color: var(--warm-red);
+  margin-top: 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border:  var(--warm-red) 1px solid;
+}
+
+.header-h1 {
+  margin-bottom: 0;
+  font-family: 'cursive', serif;
+  font-size: 44px;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+  Search Bar Styles
+========================================================================== */
+
+.search-bar {
+  margin-bottom: 30px;
+}
+
+.prompt {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
+#search-value {
+  font-size: 18px;
+  padding: 5px;
+}
+
+#search-value:focus {
+  outline: none;
+  border: 3px solid #E9A447;
+}
+
+.search-button {
+  background-color: var(--warm-red);
+  border: none;
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+/* This reference helped me figure out how to change the color of the icon: https://stackoverflow.com/questions/12272372/how-to-style-icon-color-size-and-shadow-of-font-awesome-icons */
+.fa-search {
+  color: var(--charcoal);
+}
+
+/* ==========================================================================
+  Home Page View
+========================================================================== */
+
+.background-image {
+  width: 100%;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ==========================================================================
+  Search and Saved View
+========================================================================== */
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-recipe-div {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.list-name {
+  padding: 5px;
+  width: 250px;
+  margin: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.list-name:hover {
+  text-decoration: underline;
+}
+
+.list-image {
+  padding: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+  Recipe View
+========================================================================== */
+
+  /* =====================================================================
+      Buttons at the Top
+  ===================================================================== */
+
+.recipe-button-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#back-explore-button, .save-button, .already-saved-button {
+  padding: 5px;
+  font-weight: 100;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 1px solid var(--warm-red);
+}
+
+#back-explore-button, .save-button {
+  background-color: var(--off-white);
+  color: var(--charcoal);
+}
+
+.already-saved-button {
+  background-color:  var(--warm-red);
+  color: var(--off-white);
+}
+
+/* =====================================================================
+      Detailed Recipe
+  ===================================================================== */
+
+#recipe-name {
+  font-size: 30px;
+}
+
+.recipe-div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.recipe-headers {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.recipe-image {
+  margin-top: 10px;
+  width: 300px;
+}
+
+.instructions {
+  padding: 20px;
+  margin-top: 0px;
+  line-height: 140%;
+}
+
+/* =====================================================================
+      Saved View
+  ===================================================================== */
+
+.remove-button {
+  text-align: center;
+  color: #7d7575;
+  font-size: 0.75em;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+  Breakpoints
+========================================================================== */
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 22px;
+  }
+
+  .header-h1 {
+    font-size: 60px;
+  }
+
+  form {
+    display: flex;
+  }
+
+  .prompt {
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+  
+  main {
+    /* Line up list-recipe-div items horizontally, wrapping to next line */
+    flex-flow: row wrap;
+    /* Keep list-recipe-div items lined up by photo */
+    align-items: flex-start;
+  }
+
+  .list-recipe-div {
+    margin-bottom: 40px;
+    padding: 5px;
+  }
+
+  #recipe-view {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .recipe-div {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  .ingredients-div {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .recipe-div {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .header-h1 {
+    font-size: 88px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  img.recipe-image {
+    width: 500px;
+  }
+  .ingredients-div > p {
+    padding: 10px;
+  }
+}

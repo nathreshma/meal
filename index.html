@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Meal Planner">
+  <meta property="og:description" content="Search from hundreds of recipes and save your favorites">
+  <meta property="og:image" content="https://www.themealdb.com/images/media/meals/uuuspp1468263334.jpg">
+  <meta property="og:url" content="https://nathreshma.github.io/meal-planner/">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Meal Planner</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="domHelpers.js"></script>
+  <script type="text/javascript" src="dataHelpers.js"></script>
+  <script defer src="./app.js"></script>
+  <script src="https://kit.fontawesome.com/2d9407b57b.js" crossorigin="anonymous"></script>
+</head>
+<body class="main-container">
+    <nav>
+      <i class="fas fa-home nav-icon home-redirect" id="nav-home" title="home"></i>
+      <i class="fas fa-archive nav-icon" id="nav-save" title="saved recipes"></i>
+    </nav>
+    <header>
+      <h1 class="header-h1 home-redirect">meal planner</h1>
+      <div class="search-bar">
+        <form>
+          <p class="prompt">Find your meal with the content of...</p>
+          <input type="text" id="search-value" placeholder="meal-combo" autocomplete="off">
+          <button type="submit" class="search-button">
+            <i class="fas fa-search fa-2x" title="search"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+  <main></main>
+</body>
+</html>
