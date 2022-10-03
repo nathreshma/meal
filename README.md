@@ -1,1 +1,1 @@
-A simple app using TheMealDB.com  to find ome recipes and plan your meal
+A simple app using TheMealDB.com  to find some recipes and plan your meal
