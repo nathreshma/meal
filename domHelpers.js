@@ -1,17 +1,17 @@
-// Remove all appended child elements in the main part
+
 function removeMain() {
   while (main.lastChild) {
     main.removeChild(main.lastChild)
   }
 }
 
-// Add a footer citing the API
+
 function appendFooter() {
   let footer = `<footer>Recipes sourced from <a href="https://www.themealdb.com">TheMealDB</a> (API)</footer>`
   return main.insertAdjacentHTML("beforeend", footer)
 }
 
-// ==================================HOME PAGE====================================
+
 function createMainImage(recipe) {
   const mainImage = document.createElement("img")
   mainImage.src = recipe.strMealThumb
@@ -26,7 +26,7 @@ function appendFooter() {
   return main.insertAdjacentHTML("beforeend", footer)
 }
 
-// ====================================LIST VIEW====================================
+
 function createListImage(recipe) {
   const image = document.createElement("img")
   image.alt = "recipe photo"
@@ -45,7 +45,7 @@ function createListDish(recipe) {
   return dish
 }
 
-// =============================SEARCH PAGE====================================
+
 function showNoRecipes(ingredient) {
   const noRecipes = document.createElement("p")
   noRecipes.textContent = `No recipes found for "${ingredient}"`
@@ -60,7 +60,7 @@ function countRecipes(recipes, ingredient) {
   return recipeCount;
 }
 
-// ==============================RECIPE PAGE====================================
+
 function createBackExplore() {
   const backExplore = document.createElement("button")
   backExplore.id = "back-explore-button"
@@ -117,7 +117,7 @@ function createInstructions(recipe) {
   return instructions
 }
 
-// =================================EXPLORE PAGE====================================
+
 function displayRecipeCategory(category) {
   const recipeCategory = document.createElement("p")
   recipeCategory.textContent = `Here are some other ${category.toLowerCase()} recipes`
@@ -126,7 +126,7 @@ function displayRecipeCategory(category) {
   return recipeCategory
 }
 
-// =================================RECIPE BOX====================================
+
 function createSavedHeader(recipes) {
   const savedRecipesHeader = document.createElement("p")
   recipes.length === 1 ? savedRecipesHeader.textContent = `${recipes.length} recipe saved` : savedRecipesHeader.textContent = `${recipes.length} recipes saved`
