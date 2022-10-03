@@ -1,6 +1,6 @@
-// ====================== RECIPE HELPER =========================================
+
 function listIngredients(obj) {
-  // Create elements for ingredients table and append after image
+  
   const recipeDiv = document.querySelector(".recipe-div")
   const ingredientsDiv = document.createElement("div")
   ingredientsDiv.className = "ingredients-div"
@@ -14,7 +14,7 @@ function listIngredients(obj) {
   let measurements = []
   let ingredients = []
   
-  // Push into measurements and ingredients with a for...in loop
+  
   for (let measurement in obj) {
     if (measurement.includes("strMeasure") && (obj[measurement] != " " || obj[measurement] != "")) {
       measurements.push(obj[measurement])
@@ -25,7 +25,7 @@ function listIngredients(obj) {
       ingredients.push(obj[ingredient])
     }
   }
-  // Fill in the table with measurement and ingredient arrays
+  
   for (let i = 0; i < measurements.length; i++) {
     let row = ingredientTable.insertRow(i)
     let cell1 = row.insertCell(0)
@@ -35,7 +35,7 @@ function listIngredients(obj) {
   }
 }
 
-// ================================= EXPLORE HELPER ================================
+
 function shuffle(recipes) { 
   let shuffledRecipes = recipes
   let currentIndex = recipes.length
