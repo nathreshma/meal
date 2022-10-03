@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Nunito&display=swap');
 
 :root {
-  --warm-red: #000000;
+  --black: #000000;
   --off-white: #f5f5f5;
   --charcoal: #808080;
 }
@@ -33,10 +33,10 @@ button {
 nav {
   padding-top: 0.3em;
   padding-right: 1em;
-  background-color: var(--warm-red);
+  background-color: var(--black);
   display: flex;
   justify-content: flex-end;
-  border:  var(--warm-red) 1px solid;
+  border:  var(--black) 1px solid;
 }
 
 .nav-icon {
@@ -50,12 +50,12 @@ nav {
 ========================================================================== */
 
 header {
-  background-color: var(--warm-red);
+  background-color: var(--black);
   margin-top: 0;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  border:  var(--warm-red) 1px solid;
+  border:  var(--black) 1px solid;
 }
 
 .header-h1 {
@@ -92,20 +92,15 @@ header {
 }
 
 .search-button {
-  background-color: var(--warm-red);
+  background-color: var(--black);
   border: none;
   margin-left: 5px;
   padding-top: 5px;
 }
-
-/* This reference helped me figure out how to change the color of the icon: https://stackoverflow.com/questions/12272372/how-to-style-icon-color-size-and-shadow-of-font-awesome-icons */
 .fa-search {
   color: var(--charcoal);
 }
 
-/* ==========================================================================
-  Home Page View
-========================================================================== */
 
 .background-image {
   width: 100%;
@@ -117,10 +112,6 @@ footer {
   font-size: 12px;
   text-align: center;
 }
-
-/* ==========================================================================
-  Search and Saved View
-========================================================================== */
 
 main {
   display: flex;
@@ -152,13 +143,6 @@ main {
   cursor: pointer;
 }
 
-/* ==========================================================================
-  Recipe View
-========================================================================== */
-
-  /* =====================================================================
-      Buttons at the Top
-  ===================================================================== */
 
 .recipe-button-div {
   width: 100%;
@@ -171,7 +155,7 @@ main {
   font-weight: 100;
   font-size: 16px;
   margin-top: 10px;
-  border: 1px solid var(--warm-red);
+  border: 1px solid var(--black);
 }
 
 #back-explore-button, .save-button {
@@ -180,13 +164,10 @@ main {
 }
 
 .already-saved-button {
-  background-color:  var(--warm-red);
+  background-color:  var(--black);
   color: var(--off-white);
 }
 
-/* =====================================================================
-      Detailed Recipe
-  ===================================================================== */
 
 #recipe-name {
   font-size: 30px;
@@ -218,9 +199,6 @@ main {
   line-height: 140%;
 }
 
-/* =====================================================================
-      Saved View
-  ===================================================================== */
 
 .remove-button {
   text-align: center;
@@ -231,9 +209,6 @@ main {
   cursor: pointer;
 }
 
-/* ==========================================================================
-  Breakpoints
-========================================================================== */
 
 @media screen and (min-width: 768px) {
   body {
@@ -254,9 +229,8 @@ main {
   }
   
   main {
-    /* Line up list-recipe-div items horizontally, wrapping to next line */
+   
     flex-flow: row wrap;
-    /* Keep list-recipe-div items lined up by photo */
     align-items: flex-start;
   }
 
