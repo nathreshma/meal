@@ -20,7 +20,6 @@ const form = document.querySelector("form")
 form.addEventListener("submit", (e) => {
   e.preventDefault()
   const searchValue = document.querySelector("#search-value").value
-  // API call for search results
   showResults(searchValue)
   document.querySelector("#search-value").value = ""
 })
@@ -50,7 +49,6 @@ async function loadHome() {
 }
 
 async function showResults(ingredient) {
-  // Store the URL that accesses the API in a variable
   const ingredientURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
   try {
     main.removeAttribute("id");
@@ -98,7 +96,6 @@ async function renderRecipe(id, ingredient) {
   try {
     const response = await axios.get(recipeURL)
     const recipe = response.data.meals[0]
-    // Assign id to main to allow recipe formatting
     main.id = "recipe-view"
 
     const name = createRecipeHeader(recipe)
